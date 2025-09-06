@@ -43,8 +43,8 @@ model = LR()
 model.fit(X,Y)
 result = model.predict(X_test)
 
-write(accuracy_score(Y_test,result))
-write(model.score(X_test,Y_test))
+write("Accuracy Score:", accuracy_score(Y_test,result))
+write("Accuracy (model.score): ",model.score(X_test,Y_test))
 
 write("Prediction on last row data : ", model.predict(X.tail(1))[0])
 write("Actual Answer on last row data : ", np.asarray(Y)[-1])
